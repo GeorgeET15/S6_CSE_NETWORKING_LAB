@@ -1,4 +1,4 @@
-# LAB CYCLE: Network Programming and Simulation (January 2025 - April 2025)
+# S6_CSE_NETWORKING_LAB
 
 This repository contains the curriculum and resources for a lab cycle focused on network programming and simulation in Linux. The course aims to equip students with the skills to:
 
