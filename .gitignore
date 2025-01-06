@@ -1,0 +1,31 @@
+# Ignore all files that end with .o (object files)
+*.o
+
+# Ignore all files that end with .a (archive files)
+*.a
+
+# Ignore all files that end with .so (shared libraries)
+*.so
+
+# Ignore all files that end with .exe (executable files on Windows)
+*.exe
+
+# Ignore all files that end with .out (common executable file extension)
+./a.out 
+
+# Ignore all files that end with .class (Java class files)
+*.class
+
+# Ignore all files that end with .pyc (Python bytecode files)
+*.pyc 
+
+# Ignore all files that end with .dll (Dynamic Link Libraries)
+*.dll
+
+# Ignore all files that end with .bin (binary files)
+*.bin
+
+# Ignore all files and directories that start with . (hidden files and directories)
+.DS_Store 
+*~ 
+
