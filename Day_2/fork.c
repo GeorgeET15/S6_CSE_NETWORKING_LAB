@@ -22,8 +22,6 @@ void main() {
 		printf("Fork failed");
 	}
 }
-
-
 /*
 
 Familiarization of fork() and getpid() system calls

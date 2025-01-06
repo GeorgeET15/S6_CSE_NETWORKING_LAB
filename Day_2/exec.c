@@ -12,11 +12,6 @@ void main() {
 	
 
 }
-
-
-
-
-
 /*
 
 Familiarization of exec commands

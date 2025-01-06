@@ -24,7 +24,6 @@ void main() {
 	printf("This line only executes if your age is >= 18\n");
 
 }
-
 /*
 
 Familiarization of exit() system call
