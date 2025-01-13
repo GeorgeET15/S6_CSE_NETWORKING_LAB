@@ -11,13 +11,13 @@ int main () {
 	int selection;
 	printf("System Calls Executer\n");
 	printf("---------------------\n\n");
-	char *args[] = { "./fork", "./exec", "./exit", "./wait", NULL };
+	char *args[] = { "./fork", "./exec", "./exit", "./wait", "./dirMan",  "./fileMan", NULL };
 	
 	
 	while (1) {
 	
 		printf("System Calls Available\n\n");
-		printf("1) FORK\n2) EXEC\n3) EXIT\n4) WAIT\n5) Exit\n\n");
+		printf("1) FORK\n2) EXEC\n3) EXIT\n4) WAIT\n5) Directory Management\n6) File Management\n7) Exit\n\n");
 		printf("Enter the number to execute: ");
 		scanf("%d", &selection);
 		
@@ -40,6 +40,14 @@ int main () {
 					printf("WAIT is executed\n");
 					break;
 			case 5: 
+					execvp(args[selection-1], args);
+					printf("WAIT is executed\n");
+					break;
+			case 6: 
+					execvp(args[selection-1], args);
+					printf("WAIT is executed\n");
+					break;
+			case 7: 
 					return (0);
 			default: 
 					printf("Invalid Input\n\n");
