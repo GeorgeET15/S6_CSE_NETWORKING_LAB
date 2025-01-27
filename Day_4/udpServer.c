@@ -6,7 +6,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-#define PORT 8000
+#define PORT 6000
 #define BUFFER_SIZE 1024
 
 int main() {
@@ -81,4 +81,40 @@ int main() {
     close(server_socket);
     return 0;
 }
+
+/*
+Server Program for UDP Chat Application
+Author: GeorgeET15
+
+Description:
+This program creates a server using UDP (datagram-based communication), listens for messages
+from the client, and enables two-way communication (chat) between the server and client.
+
+Main Steps:
+
+1. Socket Creation:
+   - A socket is created using the `socket()` system call with the UDP protocol (SOCK_DGRAM).
+   - The socket uses the IPv4 address family (AF_INET).
+
+2. Binding the Socket:
+   - The server binds the socket to a specific IP address and port using the `bind()` system call.
+   - If binding fails, the server exits with an error message.
+
+3. Chat Loop:
+   - The server continuously listens for incoming messages from the client using the `recvfrom()` system call.
+   - After receiving, the server prints the client's message.
+   - The server sends a reply to the client using the `sendto()` system call.
+   - The chat ends if either the client or the server sends the message "bye".
+
+4. Cleanup:
+   - After the chat ends, the server closes the socket using the `close()` system call.
+   - The program terminates gracefully.
+
+Key Functions Used:
+- `socket()`: Creates a UDP socket.
+- `bind()`: Binds the socket to an address and port.
+- `recvfrom()`: Receives data from the client.
+- `sendto()`: Sends data to the client.
+- `close()`: Closes the socket.
+*/
 

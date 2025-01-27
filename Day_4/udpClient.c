@@ -6,8 +6,8 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-#define PORT 8000
-#define SERVER_IP "127.0.0.1"
+#define PORT 6000
+#define SERVER_IP "127.0.0.2"
 #define BUFFER_SIZE 1024
 
 int main() {
@@ -76,4 +76,39 @@ int main() {
     close(client_socket);
     return 0;
 }
+/*
+Client Program for UDP Chat Application
+Author: GeorgeET15
+
+Description:
+This program creates a client using UDP (datagram-based communication), connects to the server,
+and enables two-way communication (chat) between the client and server.
+
+Main Steps:
+
+1. Socket Creation:
+   - A socket is created using the `socket()` system call with the UDP protocol (SOCK_DGRAM).
+   - The socket uses the IPv4 address family (AF_INET).
+
+2. Configuring the Server Address:
+   - The client sets up the server's IP address and port using the `server_addr` structure.
+   - The `inet_pton()` function is used to convert the server's IP address from text to binary form.
+
+3. Chat Loop:
+   - The client continuously sends messages to the server using the `sendto()` system call.
+   - After sending a message, the client waits for a response using the `recvfrom()` system call.
+   - The chat ends if either the client or the server sends the message "bye".
+
+4. Cleanup:
+   - After the chat ends, the client closes the socket using the `close()` system call.
+   - The program terminates gracefully.
+
+Key Functions Used:
+- `socket()`: Creates a UDP socket.
+- `inet_pton()`: Converts an IP address from text to binary form.
+- `sendto()`: Sends data to the server.
+- `recvfrom()`: Receives data from the server.
+- `close()`: Closes the socket.
+*/
+
 
